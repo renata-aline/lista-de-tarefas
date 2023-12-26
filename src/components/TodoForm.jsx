@@ -1,10 +1,27 @@
+import { useState } from "react";
+
 const TodoForm = () => {
+    const [value,setvalue] = useState("");
+    const [category, setCategory] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(!value || !category) return;
+        setvalue("");
+        setCategory("");
+        console.log(value, category);
+    }
+
   return (
     <div className="todo-form">
       <h2>Criar tarefa:</h2>
-      <form>
-        <input type="text" placeholder="Digite o titulo" />
-        <select>
+      <form onSubmit={handleSubmit}> 
+        <input type="text" placeholder="Digite o titulo" 
+        value={value}
+        onChange={(e) => setvalue(e.target.value)}
+
+        />
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="">Selecione uma categoria</option>
           <option value="Trabalho">Trabalho</option>
           <option value="Pessoal">Pessoal</option>
