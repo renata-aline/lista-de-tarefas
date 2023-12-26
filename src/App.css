@@ -37,8 +37,8 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  opacity: .8;
-  transition: .3s;
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 button:hover {
@@ -53,7 +53,7 @@ button:hover {
 
 .todo {
   background-color: #fff;
-  box-shadow: 0 0 10px rgba (0,0,0,0.1);
+  box-shadow: 0 0 10px rgba (0, 0, 0, 0.1);
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -74,10 +74,28 @@ todo-form {
   padding-bottom: 1.5rem;
 }
 
-input, select {
+input,
+select {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   width: 100%;
+}
+
+.filter,
+.search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
 }
