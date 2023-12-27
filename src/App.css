@@ -7,10 +7,15 @@ body {
 
 .app {
   max-width: 600px;
-  margin: 0 auto 300px;
+  margin: 0 auto;
   background-color: #efefef;
-  padding: 20px 30px;
+  padding: 8px 12px;
   border-radius: 10px;
+ 
+  @media (min-width: 768px) {
+    padding: 20px 30px;
+    
+  } 
 }
 
 h1 {
@@ -57,9 +62,13 @@ button:hover {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .complete {
